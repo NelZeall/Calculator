@@ -2,101 +2,9 @@
 <head>
 <title>Calculator</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<style type="text/css">
-	.calculator {
-		margin: 0 auto;
-		width: 350px;
-		height: 100px;
-		text-align: center;
-	}
-	.operators {
-		margin: 10px;
-	}
-</style>
-<script type="text/javascript">
-
-	var a,b,result;
-	var x, text;
-
-	function setValues() {
-		a = Number(document.getElementById("a").value);
-		b = Number(document.getElementById("b").value);
-	}
-
-	//sum ++++
-
-	function sum() {
-		setValues();
-		result = a+b;
-		x = document.getElementById("sum").value;
-
-	if (result) {
-		text ="The result is" + " " + result;
-			
-	} else if(isNaN(result)){ 
-		text = "This is not a number, ANIKI SENPAI!";	
-	
-	}  else{return false;}
-	   document.getElementById("demo").innerHTML = text;
-	}
-
-	//rest ----
-
-	function rest() {
-		setValues();
-		result = a-b;
-		x = document.getElementById("rest").value;
-
-	if (result) {
-		text ="The result is" + " " + result;
-			
-	} else if(isNaN(result)){ 
-		text = "This is not a number, ANIKI SENPAI!";	
-	
-	}  else{return false;}
-	   document.getElementById("demo").innerHTML = text;
-	}
-
-	//mult ****
-
-	function mult() {
-		setValues();
-		result = a*b;
-		x = document.getElementById("mult").value;
-
-	if (result) {
-		text ="The result is" + " " + result;
-			
-	} else if(isNaN(result)){ 
-		text = "This is not a number, ANIKI SENPAI!";	
-	
-	}  else{return false;}
-	   document.getElementById("demo").innerHTML = text;
-	}
-
-	// div ////
-
-	function div() {
-		setValues();
-		result = a/b;
-		x = document.getElementById("div").value;
-
-	if (result) {
-		text ="The result is" + " " + result;
-			
-	} else if(isNaN(result)){ 
-		text = "This is not a number, ANIKI SENPAI!";	
-	
-	}  else{return false;}
-	   document.getElementById("demo").innerHTML = text;
-	}
-
-	
-</script>
+<link href="style.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-
 <div class="calculator">
 	<input id="a" type="text">
 	<input id="b" type="text">
@@ -109,6 +17,6 @@
 	<p id="demo"></p>
 </div>
 
-
+<script src="js.js"></script>
 </body>
 </html>
