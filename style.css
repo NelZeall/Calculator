@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: bold 14px Arial, sans-serif;
+}
+html {
+	height: 100%;
+	background: white;
+	background: radial-gradient(circle, #fff 20%, #ccc);
+	background-size: cover;
+}
+.calculator {
+	margin: 0 auto;
+	width: 350px;
+	height: 100px;
+	text-align: center;
+}
+.operators {
+	margin: 10px;
+}
