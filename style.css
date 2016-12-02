@@ -1,21 +1,24 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font: bold 14px Arial, sans-serif;
+table.calc {
+     border: 2px solid #0034D1;
+     background-color: #809FFF;
 }
-html {
-	height: 100%;
-	background: white;
-	background: radial-gradient(circle, #fff 20%, #ccc);
-	background-size: cover;
+
+input.calc {
+     width: 100%;
+     padding: 10px;
+ }
+
+ table {
+ 	 margin: 0 auto;
+ 	 position: relative;
+ 	 top: 10%;
+ }
+
+#screen {
+	font-size: 20px;
 }
-.calculator {
-	margin: 0 auto;
-	width: 350px;
-	height: 100px;
-	text-align: center;
-}
-.operators {
-	margin: 10px;
+
+#mem {
+	width: 100%;
+	padding: 10px;
 }
