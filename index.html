@@ -1,22 +1,49 @@
-<!DOCTYPE html>
+<html>
 <head>
-<title>Calculator</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="calculator">
-	<input id="a" type="text">
-	<input id="b" type="text">
-	<div class="operators">
-		<input id="sum" type="button" onclick="sum()" value="+">
-		<input id="rest" type="button" onclick="rest()" value="-">
-		<input id="mult" type="button" onclick="mult()" value="x">
-		<input id="div" type="button" onclick="div()" value="÷">
-	</div>	
-	<p id="demo"></p>
-</div>
-
-<script src="js.js"></script>
+<table class="calc" cellpadding=10>
+<tr><td colspan=5><input class="calc" name="screen" id="screen" value=""></td></tr>
+<tr><td colspan=5><textarea style="display:none" id="mem" disabled></textarea></textarea></td></tr>
+<tr>
+<td><input class="calc" type="button" value=1 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value=2 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value=3 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value='/' onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value='√' onclick="doMath(this.value);"></td>
+</tr>
+<tr>
+<td><input class="calc" type="button" value=4 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value=5 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value=6 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value='*' onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value='%' id="percent" name="percent" onclick="doPercent(this.value); return false;"></td>
+</tr>
+<tr>
+<td><input class="calc" type="button" value=7 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value=8 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value=9 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value='-' onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value="M" onclick="memory()"></td>
+</tr>
+<tr>
+<td><input class="calc" type="button" value=0 onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value='.' onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value='C' onclick="pushButton(this.value);"></td>
+<td><input class="calc" type="button" value='+' onclick="pushButton(this.value);"></td>
+</tr>
+<tr><td colspan=4><input class="calc" type="button" value='=' onclick="calculate(document.getElementById('screen').value);"></td></tr>
+</table>
+</form>
+<script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
